@@ -17,7 +17,7 @@ console.log(dessert);
 dessert.unshift('cakepop');
 
 // 3. Remove the second and third items.
-dessert.splice(2, 2);
+dessert.splice(1, 2);
 
 // 4. Add two new items after the second item.
 dessert.splice(2, 0, 'mini pie', 'caramel apple');
@@ -39,17 +39,27 @@ console.log(things);
 var thingsString = things.join(', ');
 
 // 8. Declare a variable called lastItem whose using .pop() Add two new items to lastItem, on at the beginning and one at the end.
-var lastItem =
+var lastItem = ['joke', 'laugh', 'haha']
+var nItem = lastItem.pop();
+lastItem.push('terrible');
+lastItem.unshift('hilarious');
+
+
 
 // 9. Create a new Array called itemLast. The items should be the same as lastItem, only in reverse order.
+var itemLast = lastItem.reverse();
 
 // 10. Remove the first item of itemLast.
-
+var nowAnimal = itemLast.shift();
 // 11. Remove all items from itemLast (No need to write to the document. Just console.log to test your results)
+itemLast.splice(0, 3);
+
+var itemLast = [];
 
 // 12. Using the Arrays below, create a single Array called numberPets whose value is [12, 5, 9, 27, 'fish', 'dog']
 var firstArray = [12, 5, 9, 27];
 var secondArray = ['fish', 'dog'];
+var finalArray = [firstArray + "," + secondArray]
 
 // Use the following array for questions 13-16:
 var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
@@ -58,7 +68,8 @@ var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
 people.push('jim', 'bob');
 
 // 14. Remove everybody except 'Andrea' and 'Ted'
-people.splice(4, 4);
+people.splice(1, 1);
+people.splice(2, 3)
 
 // 15. Add a new person to the beginning of the Array
 people.unshift('Susie');
@@ -71,6 +82,9 @@ var array1 = ["Fido", "Spot", "Rex", "Sparky"]
 var array2 = ["Bulldog", "Lab", "Dalmation", "Beagle"]
 var array3 = ["White", "Black", "Spotted", "Tri-color"]
 
+var arrayAll = [array1, array2, array3];
+var arrayAll = array1.concat(array2, array3);
+
 // Goal:
 var array4 = [
                 ["Fido", "Spot", "Rex", "Sparky"],
@@ -80,12 +94,25 @@ var array4 = [
 
 // 18. Remove "Sparky" and "White" from the above array of arrays.
 
+array4[0].pop();
+array4[2].shift();
+
+arrayAll.splice(3, 1);
+arrayAll.splice(7, 1);
+
 // BONUS 1: Try to arrange the following items from smallest to largest:
 var sortingNumbers = [2, 5, 98, 55, 77, 300]
+sortingNumbers.sort();
+
 // Explain why it doesn't sort as expected.
 
 // BONUS 2: Transform array1 into array2 using as few lines of code as you can without directly changing the value of an item (ie array1[0] = item)
 var array1 = [2, 'dog', 34, 'Bill', 'plant', 'mug', 17];
+var array2 = [array1[4],]
+
+array1.splice(2,1);
+array1.splice(4,1);
+array1.sort().unshift(array1.pop());
 
 //Goal
 var array2 = ['plant', 17, 2, 'Bill', 'dog'];
